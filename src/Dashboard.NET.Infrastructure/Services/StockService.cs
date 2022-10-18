@@ -6,7 +6,7 @@ namespace Dashboard.NET.Infrastructure.Services;
 public interface IStockService
 {
     Task<GlobalQuoteModel> GetGlobalQuoteAsync(string symbol, string apiKey);
-
+    Task<TimeSeriesDailyModel> GetTimeSeriesDailyAsync(string symbol, string apiKey);
 }
 
 public class StockService : IStockService
@@ -21,6 +21,12 @@ public class StockService : IStockService
     public async Task<GlobalQuoteModel> GetGlobalQuoteAsync(string symbol, string apiKey)
     {
         var response = await _stockApi.GetGlobalQuote(symbol, apiKey);
+        return response;
+    }
+
+    public async Task<TimeSeriesDailyModel> GetTimeSeriesDailyAsync(string symbol, string apiKey)
+    {
+        var response = await _stockApi.GetTimeSeriesDaily(symbol, apiKey);
         return response;
     }
 }

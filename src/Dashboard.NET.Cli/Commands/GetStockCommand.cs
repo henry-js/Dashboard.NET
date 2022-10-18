@@ -23,7 +23,8 @@ public class GetStockCommand : AsyncCommand<GetStockCommandSettings>
 
     public override async Task<int> ExecuteAsync(CommandContext context, GetStockCommandSettings settings)
     {
-        GlobalQuoteModel quote = await stockService.GetGlobalQuoteAsync("GME", config.GetValue<string>(("ALPHAVANTAGE:APPID")));
+        var apiKey = config.GetValue<string>("ALPHAVANTAGE:APPID");
+        var quote = await stockService.GetTimeSeriesDailyAsync("GME", apiKey);
         AnsiConsole.WriteLine(JsonSerializer.Serialize(quote, new JsonSerializerOptions { WriteIndented = true}));
         Console.ReadLine();
         return 0;

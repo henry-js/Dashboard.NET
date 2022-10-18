@@ -8,13 +8,7 @@ public interface IStockApi
 {
     [Get("/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={apiKey}")]
     Task<GlobalQuoteModel> GetGlobalQuote(string symbol, string apiKey);
-}
 
-class StockApi
-{
-    public StockApi()
-    {
-        var stockApi = RestService.For<IStockApi>("https://www.alphavantage.co");
-        
-    }
+    [Get("/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey")]
+    Task<TimeSeriesDailyModel> GetTimeSeriesDaily(string symbol, string apiKey);
 }

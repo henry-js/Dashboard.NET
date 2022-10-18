@@ -6,10 +6,10 @@ namespace Dashboard.NET.Infrastructure.Models;
 public class GlobalQuoteModel
 {
     [JsonPropertyName("Global Quote")]
-    public Quote Quote { get; set; }
+    public GQuote Quote { get; set; }
 }
 
-public class Quote
+public class GQuote
 {
     [JsonPropertyName("01. symbol")]
     public string Symbol { get; set; }
