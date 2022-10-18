@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "a95fd946-5874-4673-8de9-441cc1a10d5e",
+    "colName": "Dashboard.NET",
+    "created": "2022-09-19T21:19:36.990Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "b341287d-aad1-41ca-bc5b-c541cb7d1123",
+        "name": "Weather",
+        "containerId": "",
+        "created": "2022-09-19T21:20:05.720Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "ff544030-0af4-4893-ba84-2c135229eb47",
+        "name": "AlphaVantage",
+        "containerId": "",
+        "created": "2022-09-26T23:33:24.521Z",
+        "sortNum": 20000
+      }
+    ],
+    "settings": {
+      "headers": [],
+      "tests": [],
+      "options": {
+        "baseUrl": "http://api.openweathermap.org"
+      }
+    }
+  }
+]

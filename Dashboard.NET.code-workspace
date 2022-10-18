@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "src\\Dashboard.NET.Cli"
+		},
+		{
+			"path": "src\\Dashboard.NET.Domain"
+		},
+		{
+			"path": "src\\Dashboard.NET.Infrastructure"
+		},
+		{
+			"path": "tests\\Dashboard.NET.Tests"
+		},
+		{
+			"path": "build"
+		}
+	],
+	"settings": {
+	}
+}

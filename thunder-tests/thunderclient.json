@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "9cbb6774-b2b7-4ca7-a433-fe133037740c",
+    "colId": "a95fd946-5874-4673-8de9-441cc1a10d5e",
+    "containerId": "b341287d-aad1-41ca-bc5b-c541cb7d1123",
+    "name": "One Call API 1.0",
+    "url": "/data/2.5/onecall?lat=52.3880787&lon=-2.2478582&exclude=daily,minutely,hourly&appid={{OPENWEATHER:APPID}}",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-09-19T21:20:16.635Z",
+    "modified": "2022-09-19T22:20:08.896Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "lat",
+        "value": "52.3880787",
+        "isPath": false
+      },
+      {
+        "name": "lon",
+        "value": "-2.2478582",
+        "isPath": false
+      },
+      {
+        "name": "exclude",
+        "value": "daily,minutely,hourly",
+        "isPath": false
+      },
+      {
+        "name": "appid",
+        "value": "{{OPENWEATHER:APPID}}",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e909e69a-c44c-4822-9d4e-580ad984dc26",
+    "colId": "a95fd946-5874-4673-8de9-441cc1a10d5e",
+    "containerId": "b341287d-aad1-41ca-bc5b-c541cb7d1123",
+    "name": "Geocoding API Call",
+    "url": "/geo/1.0/direct?q=Kidderminster,GB&limit=1&appid={{OPENWEATHER:APPID}}&exclude=minutely",
+    "method": "GET",
+    "sortNum": 5000,
+    "created": "2022-09-19T21:28:50.080Z",
+    "modified": "2022-09-19T21:49:53.164Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "q",
+        "value": "Kidderminster,GB",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "appid",
+        "value": "{{OPENWEATHER:APPID}}",
+        "isPath": false
+      },
+      {
+        "name": "exclude",
+        "value": "minutely",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "d0017a87-c2c9-440b-b475-f04783f1b4cd",
+    "colId": "a95fd946-5874-4673-8de9-441cc1a10d5e",
+    "containerId": "ff544030-0af4-4893-ba84-2c135229eb47",
+    "name": "Global Quote Call",
+    "url": "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=GME&apikey={{ALPHAVANTAGE:APPID}}",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-09-26T23:33:41.859Z",
+    "modified": "2022-09-26T23:48:24.061Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "function",
+        "value": "GLOBAL_QUOTE",
+        "isPath": false
+      },
+      {
+        "name": "symbol",
+        "value": "GME",
+        "isPath": false
+      },
+      {
+        "name": "apikey",
+        "value": "{{ALPHAVANTAGE:APPID}}",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]

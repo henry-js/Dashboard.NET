@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "5e2c6c49-30f7-4003-9bbd-7be2c7623981",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -1,
+    "created": "2022-09-19T21:32:26.763Z",
+    "modified": "2022-09-19T21:33:22.381Z",
+    "data": [
+      {
+        "name": "OPENWEATHER:APPID",
+        "value": "0a36e5187006b980e1b4011ab3d8b331"
+      }
+    ]
+  }
+]
