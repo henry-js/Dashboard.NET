@@ -3,6 +3,7 @@ using Skender.Stock.Indicators;
 
 namespace Dashboard.NET.ApiClient.Models;
 
+#nullable disable
 public partial class TimeSeriesDailyModel
 {
     [JsonPropertyName("Meta Data")]
@@ -47,3 +48,5 @@ public class Quote
     [JsonPropertyName("5. volume")]
     public decimal Volume { get; set; }
 }
+
+#nullable enable
