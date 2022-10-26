@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using Skender.Stock.Indicators;
 
-namespace Dashboard.NET.Infrastructure.Models;
+namespace Dashboard.NET.ApiClient.Models;
 
 public class GlobalQuoteModel
 {

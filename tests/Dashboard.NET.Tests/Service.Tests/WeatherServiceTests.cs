@@ -1,5 +1,5 @@
-﻿using Dashboard.NET.Infrastructure.Interfaces;
-using Dashboard.NET.Infrastructure.Services;
+﻿using Dashboard.NET.ApiClient.Interfaces;
+using Dashboard.NET.ApiClient.Services;
 using Microsoft.Extensions.Configuration;
 
 namespace Dashboard.NET.Tests.Service.Tests;

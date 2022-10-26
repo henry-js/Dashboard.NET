@@ -9,6 +9,7 @@
     <PublishSingleFile>true</PublishSingleFile>
     <DebugType>embedded</DebugType>
     <AssemblyName>dash</AssemblyName>
+    <RootNamespace>Dashboard.NET.Cli</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +27,7 @@
     <PackageReference Include="Terminal.Gui" Version="1.7.2" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="appsettings.json">
+    <None Update="appSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="userSettings.json">
@@ -34,6 +35,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dashboard.NET.Infrastructure\Dashboard.NET.Infrastructure.csproj" />
+    <ProjectReference Include="..\ApiClient\ApiClient.csproj" />
   </ItemGroup>
 </Project>

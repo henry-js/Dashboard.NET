@@ -1,12 +1,12 @@
-﻿using Dashboard.NET.Infrastructure.Interfaces;
-using Dashboard.NET.Infrastructure.Models;
+﻿using Dashboard.NET.ApiClient.Interfaces;
+using Dashboard.NET.ApiClient.Models;
 
-namespace Dashboard.NET.Infrastructure.Services;
+namespace Dashboard.NET.ApiClient.Services;
 
 public interface IStockService
 {
     Task<GlobalQuoteModel> GetGlobalQuoteAsync(string symbol, string apiKey);
-    Task<TimeSeriesDailyModel> GetTimeSeriesDailyAsync(string symbol, string apiKey);
+    Task<string> GetTimeSeriesDailyAsync(string symbol, string apiKey);
 }
 
 public class StockService : IStockService
@@ -24,7 +24,7 @@ public class StockService : IStockService
         return response;
     }
 
-    public async Task<TimeSeriesDailyModel> GetTimeSeriesDailyAsync(string symbol, string apiKey)
+    public async Task<string> GetTimeSeriesDailyAsync(string symbol, string apiKey)
     {
         var response = await _stockApi.GetTimeSeriesDaily(symbol, apiKey);
         return response;

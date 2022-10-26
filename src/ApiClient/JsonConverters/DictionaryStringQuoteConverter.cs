@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Dashboard.NET.Infrastructure.Converters;
+namespace Dashboard.NET.ApiClient.Converters;
 
 public class DictionaryStringQuoteConverter : JsonConverterFactory
 {

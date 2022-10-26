@@ -1,7 +1,7 @@
 ﻿using D20Tek.Spectre.Console.Extensions.Injection;
 using Dashboard.NET.Cli.Commands;
 using Dashboard.NET.Cli.Commands.Settings;
-using Dashboard.NET.Infrastructure.Extensions;
+using Dashboard.NET.ApiClient.Extensions;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 

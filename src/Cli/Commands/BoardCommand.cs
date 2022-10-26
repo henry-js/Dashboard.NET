@@ -1,5 +1,5 @@
 using Dashboard.NET.Cli.Commands.Settings;
-using Dashboard.NET.Infrastructure.Services;
+using Dashboard.NET.ApiClient.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 

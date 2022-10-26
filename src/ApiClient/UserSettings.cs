@@ -4,7 +4,7 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using nucs.JsonSettings;
 
-namespace Dashboard.NET.Infrastructure;
+namespace Dashboard.NET.ApiClient;
 
 public class UserSettings : JsonSettings
 {

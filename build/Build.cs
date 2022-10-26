@@ -37,11 +37,11 @@ class Build : NukeBuild
     [Solution(GenerateProjects = true)] readonly Solution Solution;
     [Parameter(ValueProviderMember = "Projects")] string Project;
     IEnumerable<string> Projects => Solution.AllProjects.Select(x => x.Name);
-    [GitRepository] readonly GitRepository GitRepository;
+    [GitRepository] readonly GitRepository Repository;
     [MinVer] readonly MinVer MinVer;
     AbsolutePath SourceDirectory => RootDirectory / "src";
     AbsolutePath OutputDirectory => RootDirectory / "release";
-    AbsolutePath CliDirectory => SourceDirectory / "Dashboard.NET.Cli";
+    AbsolutePath CliDirectory => SourceDirectory / "Cli";
     AbsolutePath TestDirectory => RootDirectory / "tests" / "Dashboard.NET.Tests";
 
 
@@ -78,6 +78,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
             Log.Information("MinVer = {Value}", MinVer.Version);
+            Log.Information("main/master branch = {Value}", Repository.IsOnMainOrMasterBranch());
         });
 
     Target Test => _ => _

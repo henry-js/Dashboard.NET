@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using Dashboard.NET.Cli.Commands.Settings;
-using Dashboard.NET.Infrastructure.Models;
-using Dashboard.NET.Infrastructure.Services;
+using Dashboard.NET.ApiClient.Models;
+using Dashboard.NET.ApiClient.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
