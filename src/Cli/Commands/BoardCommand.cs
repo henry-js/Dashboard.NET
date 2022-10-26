@@ -7,24 +7,24 @@ namespace Dashboard.NET.Cli.Commands;
 
 public class BoardCommand : AsyncCommand<BoardCommandSettings>
 {
-    private IWeatherService weatherService;
-    private ILogger<BoardCommand> logger;
-    private IConfiguration config;
-    private UserSettings userSettings;
+    private readonly IWeatherService _weatherService;
+    private readonly ILogger<BoardCommand> _logger;
+    private readonly IConfiguration _config;
+    private readonly UserSettings _userSettings;
 
-    public BoardCommand(IWeatherService weatherService, ILogger<BoardCommand> logger, IConfiguration config, UserSettings userSettings = null)
+    public BoardCommand(IWeatherService weatherService, ILogger<BoardCommand> logger, IConfiguration config, UserSettings userSettings)
     {
-        this.weatherService = weatherService;
-        this.logger = logger;
-        this.config = config;
-        this.userSettings = userSettings;
+        this._weatherService = weatherService;
+        this._logger = logger;
+        this._config = config;
+        this._userSettings = userSettings;
     }
 
     public override async Task<int> ExecuteAsync(CommandContext context, BoardCommandSettings settings)
     {
-        var weather = await weatherService.GetWeatherAsync(userSettings.OpenWeatherSettings.Latitude,
-                                                           userSettings.OpenWeatherSettings.Longitude,
-                                                           config.GetValue<string>("OPENWEATHER:APPID"),
+        var weather = await _weatherService.GetWeatherAsync(_userSettings.OpenWeatherSettings.Latitude,
+                                                           _userSettings.OpenWeatherSettings.Longitude,
+                                                           _config.GetValue<string>("OPENWEATHER:APPID"),
                                                            new List<string>());
         // TGui.DisplayBoard();
         return 0;

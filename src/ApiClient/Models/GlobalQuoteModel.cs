@@ -3,6 +3,7 @@ using Skender.Stock.Indicators;
 
 namespace Dashboard.NET.ApiClient.Models;
 
+#nullable disable
 public class GlobalQuoteModel
 {
     [JsonPropertyName("Global Quote")]
@@ -41,3 +42,5 @@ public class GQuote
     [JsonPropertyName("10. change percent")]
     public string ChangePercent { get; set; }
 }
+
+#nullable enable

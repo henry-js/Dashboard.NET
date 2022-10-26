@@ -87,8 +87,8 @@ class Build : NukeBuild
             DotNetTest(settings =>
                 {
                     return settings.SetProjectFile(TestDirectory)
-                                   .EnableNoRestore()
-                                   ;
+                            .EnableNoRestore()
+                            .EnableNoBuild();
                 }));
 
     Target Publish => _ => _
