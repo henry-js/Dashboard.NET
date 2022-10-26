@@ -1,4 +1,4 @@
-namespace Dashboard.NET.Infrastructure.Models
+namespace Dashboard.NET.ApiClient.Models
 {
 #pragma warning disable CS8618
 

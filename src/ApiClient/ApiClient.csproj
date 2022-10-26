@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <DebugType>embedded</DebugType>
     <Nullable>enable</Nullable>
+    <RootNamespace>Dashboard.NET.Infrastructure</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

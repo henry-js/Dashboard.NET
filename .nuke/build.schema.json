@@ -65,10 +65,9 @@
         "Project": {
           "type": "string",
           "enum": [
+            "ApiClient",
             "Build",
-            "Dashboard.NET.Cli",
-            "Dashboard.NET.Domain",
-            "Dashboard.NET.Infrastructure",
+            "Cli",
             "Dashboard.NET.Tests"
           ]
         },
