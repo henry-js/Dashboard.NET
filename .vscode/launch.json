@@ -27,9 +27,9 @@
             "name": "Debug Dash",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "buildDash",
+            "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/Dashboard.NET.Cli/bin/Debug/net6.0/win-x64/dash.dll",
+            "program": "${workspaceFolder}/src/Cli/bin/Debug/net6.0/win-x64/dash.dll",
             "args": [
                 "get",
                 "stock",
@@ -41,7 +41,7 @@
                 // "--use-saved",
                 // "board"
             ],
-            "cwd": "${workspaceFolder}/src/Dashboard.NET.CLI",
+            "cwd": "${workspaceFolder}/src/Cli",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "externalTerminal",
             "stopAtEntry": false,
@@ -50,6 +50,22 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/Cli/bin/Debug/net6.0/win-x64/dash.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Cli",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
         },
     ]
 }

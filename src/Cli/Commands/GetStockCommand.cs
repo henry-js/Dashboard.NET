@@ -25,7 +25,6 @@ public class GetStockCommand : AsyncCommand<GetStockCommandSettings>
     {
         var apiKey = _config.GetValue<string>("ALPHAVANTAGE:APPID");
         var quote = await _stockService.GetTimeSeriesDailyAsync("GME", apiKey);
-        AnsiConsole.WriteLine(JsonSerializer.Serialize(quote, new JsonSerializerOptions { WriteIndented = true}));
         Console.ReadLine();
         return 0;
     }

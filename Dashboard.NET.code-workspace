@@ -4,13 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "src\\Dashboard.NET.Cli"
+			"path": "src\\Cli"
 		},
 		{
-			"path": "src\\Dashboard.NET.Domain"
-		},
-		{
-			"path": "src\\Dashboard.NET.Infrastructure"
+			"path": "src\\Infrastructure"
 		},
 		{
 			"path": "tests\\Dashboard.NET.Tests"
