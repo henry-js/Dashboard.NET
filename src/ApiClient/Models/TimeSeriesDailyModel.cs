@@ -6,33 +6,6 @@ namespace Dashboard.NET.ApiClient.Models;
 #nullable disable
 public partial class TimeSeriesDailyModel
 {
-    [JsonPropertyName("Meta Data")]
-    public MetaData MetaData { get; set; }
-
-    [JsonPropertyName("Time Series (Daily)")]
-    public Dictionary<string, Quote> TimeSeriesDaily { get; set; }
-}
-
-public partial class MetaData
-{
-    [JsonPropertyName("1. Information")]
-    public string Information { get; set; }
-
-    [JsonPropertyName("2. Symbol")]
-    public string Symbol { get; set; }
-
-    [JsonPropertyName("3. Last Refreshed")]
-    public DateTimeOffset LastRefreshed { get; set; }
-
-    [JsonPropertyName("4. Output Size")]
-    public string OutputSize { get; set; }
-
-    [JsonPropertyName("5. Time Zone")]
-    public string TimeZone { get; set; }
-}
-
-public class Quote
-{
     [JsonPropertyName("1. open")]
     public decimal Open { get; set; }
 

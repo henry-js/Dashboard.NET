@@ -43,9 +43,9 @@ public static class ServiceRegistrar
             .AddRefitClient<IWeatherApi>(new RefitSettings())
             .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.openweathermap.org"))
             .Services
-                
+
             .AddSingleton<IStockService, StockService>()
-            .AddRefitClient<IStockApi>((_) =>
+            .AddRefitClient<IAlphaVantageApi>((_) =>
             {
                 var options = new JsonSerializerOptions
                 {
@@ -54,7 +54,7 @@ public static class ServiceRegistrar
                 return new RefitSettings
                 {
                     ContentSerializer = new SystemTextJsonContentSerializer(options)
-                    
+
                 };
             })
             .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://www.alphavantage.co"))
