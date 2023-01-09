@@ -7,7 +7,7 @@
 			"path": "src\\Cli"
 		},
 		{
-			"path": "src\\Infrastructure"
+			"path": "src\\ApiClient"
 		},
 		{
 			"path": "tests\\Dashboard.NET.Tests"
@@ -16,6 +16,5 @@
 			"path": "build"
 		}
 	],
-	"settings": {
-	}
+	"settings": {}
 }

@@ -28,9 +28,9 @@ public class StockService : IStockService
 
     public async Task<TimeSeriesDailyResult> GetTimeSeriesDailyAsync(string symbol, string apiKey)
     {
-        var response = await CallApi(nameof(GetTimeSeriesDailyAsync), symbol, apiKey);
-        var success = !string.IsNullOrWhiteSpace(response);
-        var alphaVantageResult = new AlphaVantageResult(success, symbol, response);
+        // TODO - Rework this
+        var stringResponse = await _stockApi.GetTimeSeriesDaily("TIME_SERIES_DAILY", symbol, apiKey);
+        var alphaVantageResult = new AlphaVantageResult(symbol, stringResponse);
         var converter = new TimeSeriesDailyConverter();
         var converted = converter.Convert(alphaVantageResult);
 
@@ -49,11 +49,11 @@ public class StockService : IStockService
 
 public class AlphaVantageResult
 {
-    public AlphaVantageResult(bool succeeded, string symbol, string? result)
+    public AlphaVantageResult(string symbol, string? result)
     {
-        Succeeded = succeeded;
-        Symbol    = symbol;
-        Result    = result;
+        Succeeded = !string.IsNullOrWhiteSpace(result);
+        Symbol = symbol;
+        Result = result;
     }
 
     public bool Succeeded { get; }
