@@ -1,13 +1,14 @@
-using Dashboard.NET.ApiClient.Converters;
+﻿using Dashboard.NET.ApiClient.Converters;
 using Dashboard.NET.ApiClient.Interfaces;
 using Dashboard.NET.ApiClient.Models;
+using Dashboard.NET.Infrastructure.Converters;
 
 namespace Dashboard.NET.ApiClient.Services;
 
 public interface IStockService
 {
     Task<GlobalQuoteModel> GetGlobalQuoteAsync(string symbol, string apiKey);
-    Task<TimeSeriesDailyResult> GetTimeSeriesDailyAsync(string symbol, string apiKey);
+    Task<TimeSeriesResult> GetTimeSeriesAsync(string symbol, string apiKey);
 }
 
 public class StockService : IStockService
@@ -26,45 +27,23 @@ public class StockService : IStockService
         return response;
     }
 
-    public async Task<TimeSeriesDailyResult> GetTimeSeriesDailyAsync(string symbol, string apiKey)
+    public async Task<TimeSeriesResult> GetTimeSeriesAsync(string symbol, string apiKey)
     {
         // TODO - Rework this
-        var stringResponse = await _stockApi.GetTimeSeriesDaily("TIME_SERIES_DAILY", symbol, apiKey);
-        var alphaVantageResult = new AlphaVantageResult(symbol, stringResponse);
-        var converter = new TimeSeriesDailyConverter();
-        var converted = converter.Convert(alphaVantageResult);
+        var stringResponse = await _stockApi.GetTimeSeries("TIME_SERIES_DAILY_ADJUSTED", symbol, apiKey);
+        var converter = new TimeSeriesConverter();
+        var converted = converter.Convert(stringResponse);
 
         return converted;
     }
 
-    private async Task<string> CallApi(string methodName, string symbol, string apiKey)
-    {
-        return methodName switch
-        {
-            "GetTimeSeriesDailyAsync" => await _stockApi.GetTimeSeriesDaily("TIME_SERIES_DAILY", symbol, apiKey),
-            _ => throw new NotImplementedException()
-        };
-    }
-}
-
-public class AlphaVantageResult
-{
-    public AlphaVantageResult(string symbol, string? result)
-    {
-        Succeeded = !string.IsNullOrWhiteSpace(result);
-        Symbol = symbol;
-        Result = result;
-    }
-
-    public bool Succeeded { get; }
-    public string Symbol { get; }
-    public string Result { get; }
 }
 
 
-public class TimeSeriesDailyResult
+public class TimeSeriesResult
 {
     public bool Succeeded { get; init; }
     public string Symbol { get; init; }
-    public IEnumerable<TimeSeriesDailyModel> Result { get; init; }
+    public IEnumerable<TimeSeries> Values { get; init; }
+    public string FailureMessage { get; set; }
 }

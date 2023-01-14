@@ -11,3 +11,5 @@ public interface IWeatherApi
     [Get(path: "/geo/1.0/direct?q={cityName},{countryCode}&limit=1&appid={apiKey}")]
     Task<List<LocationModel>> GetLocation(string cityName, string countryCode, string apiKey);
 }
+
+// TODO: Move to vertical slice Weather folder
