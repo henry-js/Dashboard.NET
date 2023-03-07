@@ -7,6 +7,12 @@
       "commands": [
         "dotnet-cake"
       ]
+    },
+    "husky": {
+      "version": "0.5.4",
+      "commands": [
+        "husky"
+      ]
     }
   }
 }
