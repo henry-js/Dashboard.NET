@@ -8,7 +8,6 @@ public class TimeSeriesMap : ClassMap<TimeSeries>
 {
     public TimeSeriesMap()
     {
-
         Map(m => m.TimeStamp).Name("timestamp").TypeConverter<DateOnlyConverter>();
         Map(m => m.Open).Name("open");
         Map(m => m.High).Name("high");

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Run Cli (net7.0)",
+            "type": "dotnet",
+            "allowParallelRun": true,
+            "projectPath": "D:\\repos\\Dashboard.NET\\src\\Cli\\Cli.csproj",
+            "exePath": "D:\\repos\\Dashboard.NET\\src\\Cli\\bin\\Debug\\net7.0\\win-x64\\dash.exe",
+            "args": ["get", "board"],
+        },
+
+
+    ]
+}
