@@ -33,6 +33,7 @@ else {
 if ($header -match $pattern) {
     $newHeader = $types[$Matches.type] + " " + $header
     Write-Host "NEW MSG: $newHeader"
+    $newHeader | Out-File $args[0]
     Exit 0
 }
 
