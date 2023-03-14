@@ -31,16 +31,30 @@ foreach ($arg in $args) {
     $i = 1
     Write-Host "Arg {$i}: $arg"
 }
-$pattern = "^(?=.{1,90}$)(?:build|feat|ci|chore|docs|fix|perf|refactor|revert|style|test)(?:\(.+\))*(?::).{4,}(?:#\d+)*(?<![\.\s])$"
+$types = @{
+    build    = '🏗️'
+    feat     = '✨'
+    ci       = '👷'
+    chore    = '🚧'
+    docs     = '📝'
+    fix      = '🐛'
+    perf     = '⚡'
+    refactor = '♻️'
+    revert   = '⏪'
+    style    = '💄'
+    test     = '🧪'
+}
+$joinedTypes = $types -join '\|'
+$pattern = "^(?=.{1,90}$)(?:$joinedTypes)(?:\(.+\))*(?::).{4,}(?:#\d+)*(?<![\.\s])$"
 
 if (Test-Path $args[0]) {
     $msg = Get-Content $args[0]
 }
 if ($msg -is [array]) {
-    $msg = $msg[0]
+    $header = $msg[0]
 }
 
-if ([System.Text.RegularExpressions.Regex]::IsMatch($msg, $pattern)) {
+if ([System.Text.RegularExpressions.Regex]::IsMatch($header, $pattern)) {
     Exit 0
 }
 
