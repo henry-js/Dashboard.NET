@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Cli\Cli.csproj" />
-    <ProjectReference Include="..\..\src\ApiClient\ApiClient.csproj" />
+    <ProjectReference Include="..\..\src\Lib\Lib.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 using CsvHelper.Configuration.Attributes;
 using Skender.Stock.Indicators;
 
-namespace Dashboard.NET.ApiClient.Models;
+namespace Dashboard.NET.Lib.Models;
 
 #nullable disable
 public partial class TimeSeries

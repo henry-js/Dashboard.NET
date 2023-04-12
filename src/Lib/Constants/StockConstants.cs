@@ -1,4 +1,4 @@
-﻿namespace Dashboard.NET.ApiClient.Constants;
+﻿namespace Dashboard.NET.Lib.Constants;
 
 public static class StockConstants
 {

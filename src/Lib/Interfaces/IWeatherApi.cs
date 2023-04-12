@@ -1,7 +1,7 @@
-using Dashboard.NET.ApiClient.Models;
+using Dashboard.NET.Lib.Models;
 using Refit;
 
-namespace Dashboard.NET.ApiClient.Interfaces;
+namespace Dashboard.NET.Lib.Interfaces;
 
 public interface IWeatherApi
 {

@@ -1,7 +1,7 @@
 using Dashboard.NET.Cli.Commands;
 using Dashboard.NET.Cli.Commands.Settings;
-using Dashboard.NET.ApiClient;
-using Dashboard.NET.ApiClient.Services;
+using Dashboard.NET.Lib;
+using Dashboard.NET.Lib.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;

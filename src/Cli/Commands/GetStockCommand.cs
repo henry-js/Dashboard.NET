@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
-using Dashboard.NET.ApiClient.Models;
-using Dashboard.NET.ApiClient.Services;
+using Dashboard.NET.Lib.Models;
+using Dashboard.NET.Lib.Services;
 using Dashboard.NET.Cli.Commands.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Dashboard.NET.ApiClient.Models;
+namespace Dashboard.NET.Lib.Models;
 #pragma warning disable CS8618
 public partial class WeatherModel
 {

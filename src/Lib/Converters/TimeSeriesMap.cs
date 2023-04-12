@@ -1,8 +1,8 @@
 using CsvHelper.Configuration;
 using CsvHelper.TypeConversion;
-using Dashboard.NET.ApiClient.Models;
+using Dashboard.NET.Lib.Models;
 
-namespace Dashboard.NET.ApiClient.Converters;
+namespace Dashboard.NET.Lib.Converters;
 
 public class TimeSeriesMap : ClassMap<TimeSeries>
 {

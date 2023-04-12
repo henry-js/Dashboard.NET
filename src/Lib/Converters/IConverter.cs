@@ -1,4 +1,4 @@
-using Dashboard.NET.ApiClient.Services;
+using Dashboard.NET.Lib.Services;
 
 namespace Dashboard.NET.Infrastructure.Converters;
 

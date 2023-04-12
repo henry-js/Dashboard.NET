@@ -1,10 +1,10 @@
 using System.Globalization;
 using CsvHelper;
-using Dashboard.NET.ApiClient.Models;
-using Dashboard.NET.ApiClient.Services;
 using Dashboard.NET.Infrastructure.Converters;
+using Dashboard.NET.Lib.Models;
+using Dashboard.NET.Lib.Services;
 
-namespace Dashboard.NET.ApiClient.Converters;
+namespace Dashboard.NET.Lib.Converters;
 
 public class TimeSeriesConverter : IConverter
 {

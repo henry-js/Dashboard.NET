@@ -1,12 +1,12 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Dashboard.NET.ApiClient.Interfaces;
-using Dashboard.NET.ApiClient.Services;
+using Dashboard.NET.Lib.Interfaces;
+using Dashboard.NET.Lib.Services;
 using Microsoft.Extensions.DependencyInjection;
 using nucs.JsonSettings;
 using Refit;
 
-namespace Dashboard.NET.ApiClient.Extensions;
+namespace Dashboard.NET.Lib.Extensions;
 
 public static class ServiceRegistrar
 {

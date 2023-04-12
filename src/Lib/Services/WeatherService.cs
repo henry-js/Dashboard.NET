@@ -1,7 +1,7 @@
-using Dashboard.NET.ApiClient.Interfaces;
-using Dashboard.NET.ApiClient.Models;
+using Dashboard.NET.Lib.Interfaces;
+using Dashboard.NET.Lib.Models;
 
-namespace Dashboard.NET.ApiClient.Services;
+namespace Dashboard.NET.Lib.Services;
 
 public interface IWeatherService
 {
