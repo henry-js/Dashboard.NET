@@ -16,5 +16,7 @@
 			"path": "build"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"powershell.cwd": "c:\\Users\\jhenry\\repos\\Dashboard.NET"
+	}
 }
